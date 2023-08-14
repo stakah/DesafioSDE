@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "6113faa4-5c65-4bdf-b343-7a0fe0196d06",
+		"name": "Desafio SDE BHUB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1472528"
+	},
+	"item": [
+		{
+			"name": "PROD_FISICO",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "PROD_FISICO"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:1880/payment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "1880",
+					"path": [
+						"payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIVRO",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "LIVRO"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:1880/payment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "1880",
+					"path": [
+						"payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ASSOCIACAO_MEMBRO",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "ASSOCIACAO_MEMBRO"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:1880/payment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "1880",
+					"path": [
+						"payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPGRADE_ASSOCIACAO_MEMBRO",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "UPGRADE_ASSOCIACAO_MEMBRO"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:1880/payment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "1880",
+					"path": [
+						"payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VIDEO_APRENDER_ESQUIAR",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "VIDEO_APRENDER_ESQUIAR"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:1880/payment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "1880",
+					"path": [
+						"payment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

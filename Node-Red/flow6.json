@@ -1,0 +1,279 @@
+[
+    {
+        "id": "37e23035a12cfe48",
+        "type": "tab",
+        "label": "Flow 6",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b98ac5973f18e026",
+        "type": "http in",
+        "z": "37e23035a12cfe48",
+        "name": "endpoint: /payment",
+        "url": "/payment",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "60eb9c332f0dd885",
+                "ed28445efbc52b37"
+            ]
+        ]
+    },
+    {
+        "id": "60eb9c332f0dd885",
+        "type": "switch",
+        "z": "37e23035a12cfe48",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "PROD_FISICO",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "LIVRO",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ASSOCIACAO_MEMBRO",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "UPGRADE_ASSOCIACAO_MEMBRO",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "VIDEO_APRENDER_ESQUIAR",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            },
+            {
+                "t": "istype",
+                "v": "object",
+                "vt": "object"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 7,
+        "x": 190,
+        "y": 460,
+        "wires": [
+            [
+                "02b08bf6434bf161"
+            ],
+            [
+                "3981a6184ab45aec"
+            ],
+            [
+                "bfcd82aabc382f0a"
+            ],
+            [
+                "0a51e5142c712033"
+            ],
+            [
+                "6dd27c5e1d83e176"
+            ],
+            [
+                "6699499c9c439958"
+            ],
+            [
+                "41c1d6d38ae645dc",
+                "98f7bb8200596924"
+            ]
+        ]
+    },
+    {
+        "id": "02b08bf6434bf161",
+        "type": "link call",
+        "z": "37e23035a12cfe48",
+        "name": "PRODUTO_FISICO",
+        "links": [
+            "14df6896e8aa2e18"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 420,
+        "y": 280,
+        "wires": [
+            [
+                "98f7bb8200596924"
+            ]
+        ]
+    },
+    {
+        "id": "3981a6184ab45aec",
+        "type": "link call",
+        "z": "37e23035a12cfe48",
+        "name": "LIVRO",
+        "links": [
+            "41c07f735081fe5b"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 370,
+        "y": 340,
+        "wires": [
+            [
+                "98f7bb8200596924"
+            ]
+        ]
+    },
+    {
+        "id": "bfcd82aabc382f0a",
+        "type": "link call",
+        "z": "37e23035a12cfe48",
+        "name": "ASSOCIACAO_MEMBRO",
+        "links": [
+            "bf5e540815f135b6"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 430,
+        "y": 400,
+        "wires": [
+            [
+                "98f7bb8200596924"
+            ]
+        ]
+    },
+    {
+        "id": "6dd27c5e1d83e176",
+        "type": "link call",
+        "z": "37e23035a12cfe48",
+        "name": "VIDEO_APRENDER_ESQUIAR",
+        "links": [
+            "03a525ab8c2fa600"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 450,
+        "y": 520,
+        "wires": [
+            [
+                "98f7bb8200596924"
+            ]
+        ]
+    },
+    {
+        "id": "6699499c9c439958",
+        "type": "link call",
+        "z": "37e23035a12cfe48",
+        "name": "OTHER",
+        "links": [
+            "a1b6db0587464a97"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 380,
+        "y": 580,
+        "wires": [
+            [
+                "98f7bb8200596924"
+            ]
+        ]
+    },
+    {
+        "id": "0a51e5142c712033",
+        "type": "link call",
+        "z": "37e23035a12cfe48",
+        "name": "UPGRADE_ASSOCIACAO_MEMBRO",
+        "links": [
+            "47eb359dba7396ea"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 470,
+        "y": 460,
+        "wires": [
+            [
+                "98f7bb8200596924"
+            ]
+        ]
+    },
+    {
+        "id": "98f7bb8200596924",
+        "type": "http response",
+        "z": "37e23035a12cfe48",
+        "name": "response",
+        "statusCode": "",
+        "headers": {},
+        "x": 760,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "ed28445efbc52b37",
+        "type": "debug",
+        "z": "37e23035a12cfe48",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "41c1d6d38ae645dc",
+        "type": "debug",
+        "z": "37e23035a12cfe48",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "f8d77364dc3ffabf",
+        "type": "join",
+        "z": "37e23035a12cfe48",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 250,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    }
+]
